@@ -1,1 +1,1 @@
-# rps-game
+first javascript code from scratch
