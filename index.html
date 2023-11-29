@@ -24,7 +24,7 @@ function getComputerChoice (){
 }
 console.log(getComputerChoice())
 
-   function game(playerSelection, computerSelection){
+function game(playerSelection, computerSelection){
     
     if (playerSelection =="rock" && getComputerChoice()=="paper")       { console.log ("You lose, I had chosen paper")}
     else if (playerSelection =="rock" && getComputerChoice()=="scissor")     {console.log ("You win, I had chosen scissor")}
@@ -32,7 +32,7 @@ console.log(getComputerChoice())
     else if (playerSelection =="paper" && getComputerChoice()=="rock")       { console.log ("You win, I had chosen rock")}
     else if (playerSelection =="scissor" && getComputerChoice()=="paper")    { console.log ("You win, I had chosen paper")}   
     else if (playerSelection =="scissor" && getComputerChoice()=="rock")     { console.log ("You lose, I had chosen rock")}
-    else if(playerSelection == getComputerChoice()) { console.log("It's a tie")}
+    else if(playerSelection == getComputerChoice()) { console.log("It's a tie"),  playRound()}
 }
 
 
@@ -43,6 +43,7 @@ console.log(game(playerSelection , computerSelection));
  }
 
  playRound()
+
 
 </script>
    </body> 
