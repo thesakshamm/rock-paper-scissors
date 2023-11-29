@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+/*get computer to select rock, paper or scissors
+get player to type rock, paper or scissors
+write what to display for each condition i.e what happen when player selects rock and computer selects scissors 
+possible conditions (rock, paper) ,(rock, scissor), (rock,rock), 
+(paper,rock), (paper scissor), (paper, paper), (scissor,rock), (scissor,paper), (scissor, scissor)
+ */
+
+ 
+ function playRound(){
+ let random = Math.floor(Math.random()*3);
+
+function getComputerChoice (){
+    
+    if(random == 0){return "rock" }
+    else if(random == 1){return "paper" }
+    else if(random == 2){return "scissor" }
+}
+console.log(getComputerChoice())
+
+   function game(playerSelection, computerSelection){
+    
+    if (playerSelection =="rock" && getComputerChoice()=="paper")       { console.log ("You lose, I had chosen paper")}
+    else if (playerSelection =="rock" && getComputerChoice()=="scissor")     {console.log ("You win, I had chosen scissor")}
+    else if (playerSelection =="paper" && getComputerChoice()=="scissor")    { console.log ("You lose, I had chosen scissor")}
+    else if (playerSelection =="paper" && getComputerChoice()=="rock")       { console.log ("You win, I had chosen rock")}
+    else if (playerSelection =="scissor" && getComputerChoice()=="paper")    { console.log ("You win, I had chosen paper")}   
+    else if (playerSelection =="scissor" && getComputerChoice()=="rock")     { console.log ("You lose, I had chosen rock")}
+    else if(playerSelection == getComputerChoice()) { console.log("It's a tie")}
+}
+
+
+let input = prompt("type rock, paper or scissor to play rock, paper and scissor")
+let playerSelection= input.toLowerCase();
+const computerSelection = getComputerChoice();
+console.log(game(playerSelection , computerSelection));
+ }
+
+ playRound()
+
+</script>
+   </body> 
+</html>
