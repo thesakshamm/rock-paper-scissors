@@ -26,13 +26,13 @@ console.log(getComputerChoice())
 
 function game(playerSelection, computerSelection){
     
-    if (playerSelection =="rock" && getComputerChoice()=="paper")       { console.log ("You lose, I had chosen paper")}
-    else if (playerSelection =="rock" && getComputerChoice()=="scissor")     {console.log ("You win, I had chosen scissor")}
-    else if (playerSelection =="paper" && getComputerChoice()=="scissor")    { console.log ("You lose, I had chosen scissor")}
-    else if (playerSelection =="paper" && getComputerChoice()=="rock")       { console.log ("You win, I had chosen rock")}
-    else if (playerSelection =="scissor" && getComputerChoice()=="paper")    { console.log ("You win, I had chosen paper")}   
-    else if (playerSelection =="scissor" && getComputerChoice()=="rock")     { console.log ("You lose, I had chosen rock")}
-    else if(playerSelection == getComputerChoice()) { console.log("It's a tie"),  playRound()}
+    if (playerSelection =="rock" && getComputerChoice()=="paper")    { console.log ("You lose, I had chosen paper") }; return false;
+     if (playerSelection =="rock" && getComputerChoice()=="scissor")     {console.log ("You win, I had chosen scissor")}; return true;
+     if (playerSelection =="paper" && getComputerChoice()=="scissor")    { console.log ("You lose, I had chosen scissor")}; return false;
+     if (playerSelection =="paper" && getComputerChoice()=="rock")       { console.log ("You win, I had chosen rock")}; return true;
+     if (playerSelection =="scissor" && getComputerChoice()=="paper")    { console.log ("You win, I had chosen paper")}  return true; 
+     if (playerSelection =="scissor" && getComputerChoice()=="rock")     { console.log ("You lose, I had chosen rock")} return false;
+    if(playerSelection == getComputerChoice()) { console.log("It's a tie"),  playRound()} ;return null;
 }
 
 
@@ -42,11 +42,9 @@ const computerSelection = getComputerChoice();
 return (game(playerSelection , computerSelection));
  }
 
+
  playRound()
- playRound()
- playRound()
- playRound()
- playRound()
+
 
 
 </script>
