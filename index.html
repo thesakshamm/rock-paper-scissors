@@ -35,17 +35,33 @@ function getComputerChoice (){
     else if(playerSelection == getComputerChoice()) { console.log("It's a tie. PLAY AGAIN!"), playRound()}
 }
 
-let playerScore = 0
-let computerScore = 0
+
+
 
 
 let input = prompt("type rock, paper or scissor to play rock, paper and scissor")
 let playerSelection= input.toLowerCase();
 const computerSelection = getComputerChoice();
-console.log(game(playerSelection , computerSelection));
+
+
+
+let playerScore = 0
+let computerScore = 0
+
+    switch (game(playerSelection, computerSelection)){
+    case true: playerScore++
+    break
+    case false:computerScore++
+    break
+}
+
+console.log("Player Score:" + " " + playerScore)
+console.log("Computer Score: " + computerScore)
  }
 
  playRound()
+ 
+
 
 </script>
    </body> 
