@@ -12,6 +12,8 @@ possible conditions (rock, paper) ,(rock, scissor), (rock,rock),
 (paper,rock), (paper scissor), (paper, paper), (scissor,rock), (scissor,paper), (scissor, scissor)
  */
 
+ let playerScore = 0;
+let computerScore = 0;
 
  function playRound(){
  let random = Math.floor(Math.random()*3);
@@ -45,8 +47,7 @@ const computerSelection = getComputerChoice();
 
 
 
-let playerScore = 0
-let computerScore = 0
+
 
     switch (game(playerSelection, computerSelection)){
     case true: playerScore++
@@ -60,6 +61,26 @@ console.log("Computer Score: " + computerScore)
  }
 
  playRound()
+ playRound()
+ playRound()
+ playRound()
+ playRound()
+
+function result(){
+    if (playerScore > computerScore){console.log("Woah, seems like you won the game")}
+    else if (computerScore > playerScore) {console.log("Computerji won the game. Better luck next time")}
+    else {console.log(" It's a draw.")}
+}
+
+result()
+
+
+
+ 
+ 
+ 
+
+    
  
 
 
