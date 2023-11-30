@@ -26,14 +26,17 @@ function getComputerChoice (){
 
    function game(playerSelection, computerSelection){
 
-    if (playerSelection =="rock" && getComputerChoice()=="paper")       { console.log ("You lose, I had chosen paper")}
-    else if (playerSelection =="rock" && getComputerChoice()=="scissor")     {console.log ("You win, I had chosen scissor")}
-    else if (playerSelection =="paper" && getComputerChoice()=="scissor")    { console.log ("You lose, I had chosen scissor")}
-    else if (playerSelection =="paper" && getComputerChoice()=="rock")       { console.log ("You win, I had chosen rock")}
-    else if (playerSelection =="scissor" && getComputerChoice()=="paper")    { console.log ("You win, I had chosen paper")}   
-    else if (playerSelection =="scissor" && getComputerChoice()=="rock")     { console.log ("You lose, I had chosen rock")}
-    else if(playerSelection == getComputerChoice()) { console.log("It's a tie")}
+    if (playerSelection =="rock" && getComputerChoice()=="paper")       { console.log ("You lose, I had chosen paper"); return false} 
+     if (playerSelection =="rock" && getComputerChoice()=="scissor")     {console.log ("You win, I had chosen scissor"); return true}
+    else if (playerSelection =="paper" && getComputerChoice()=="scissor")    { console.log ("You lose, I had chosen scissor"); return false}
+    else if (playerSelection =="paper" && getComputerChoice()=="rock")       { console.log ("You win, I had chosen rock"); return true}
+    else if (playerSelection =="scissor" && getComputerChoice()=="paper")    { console.log ("You win, I had chosen paper"); return true}   
+    else if (playerSelection =="scissor" && getComputerChoice()=="rock")     { console.log ("You lose, I had chosen rock"); return false}
+    else if(playerSelection == getComputerChoice()) { console.log("It's a tie. PLAY AGAIN!"), playRound()}
 }
+
+let playerScore = 0
+let computerScore = 0
 
 
 let input = prompt("type rock, paper or scissor to play rock, paper and scissor")
