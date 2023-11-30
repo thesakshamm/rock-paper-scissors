@@ -25,8 +25,7 @@ function getComputerChoice (){
     else if(random == 2){return "scissor" }
 }
 
-
-   function game(playerSelection, computerSelection){
+function game(playerSelection, computerSelection){
 
     if (playerSelection =="rock" && getComputerChoice()=="paper")       { console.log ("You lose, I had chosen paper"); return false} 
      if (playerSelection =="rock" && getComputerChoice()=="scissor")     {console.log ("You win, I had chosen scissor"); return true}
@@ -37,17 +36,9 @@ function getComputerChoice (){
     else if(playerSelection == getComputerChoice()) { console.log("It's a tie. PLAY AGAIN!"), playRound()}
 }
 
-
-
-
-
 let input = prompt("type rock, paper or scissor to play rock, paper and scissor")
 let playerSelection= input.toLowerCase();
 const computerSelection = getComputerChoice();
-
-
-
-
 
     switch (game(playerSelection, computerSelection)){
     case true: playerScore++
