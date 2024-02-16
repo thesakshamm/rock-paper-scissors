@@ -2,15 +2,24 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="rps.css">
     </head>
     <body>
-        <script>
+        <div class = 'icons'>
+        <div class = 'rock'> <img src = './rock.png'><button>ROCK</button></div>
+        <div class = 'paper'><img src = './paper.png'><button>PAPER</button></div>
+        <div class = 'scissor'><img src = './scissor.png'><button>SCISSOR</button></div>
+        </div>
+       
+       
+       
+       <script>
 /*get computer to select rock, paper or scissors
 get player to type rock, paper or scissors
 write what to display for each condition i.e what happen when player selects rock and computer selects scissors 
 possible conditions (rock, paper) ,(rock, scissor), (rock,rock), 
 (paper,rock), (paper scissor), (paper, paper), (scissor,rock), (scissor,paper), (scissor, scissor)
- */
+ 
 
  let playerScore = 0;
 let computerScore = 0;
@@ -28,7 +37,7 @@ function getComputerChoice (){
 function game(playerSelection, computerSelection){
 
     if (playerSelection =="rock" && getComputerChoice()=="paper")       { console.log ("You lose, I had chosen paper"); return false} 
-     if (playerSelection =="rock" && getComputerChoice()=="scissor")     {console.log ("You win, I had chosen scissor"); return true}
+    if (playerSelection =="rock" && getComputerChoice()=="scissor")     {console.log ("You win, I had chosen scissor"); return true}
     else if (playerSelection =="paper" && getComputerChoice()=="scissor")    { console.log ("You lose, I had chosen scissor"); return false}
     else if (playerSelection =="paper" && getComputerChoice()=="rock")       { console.log ("You win, I had chosen rock"); return true}
     else if (playerSelection =="scissor" && getComputerChoice()=="paper")    { console.log ("You win, I had chosen paper"); return true}   
@@ -47,8 +56,8 @@ const computerSelection = getComputerChoice();
     break
 }
 
-console.log("Player Score:" + " " + playerScore)
-console.log("Computer Score: " + computerScore)
+console.log("Player Score: " + " " + playerScore)
+console.log("Computer Score: " + " " + computerScore)
  }
 
  playRound()
@@ -62,18 +71,7 @@ function result(){
     else if (computerScore > playerScore) {console.log("Computerji won the game. Better luck next time!")}
     else {console.log(" It's a draw.")}
 }
-
-result()
-
-
-
- 
- 
- 
-
-    
- 
-
+result()*/
 
 </script>
    </body> 

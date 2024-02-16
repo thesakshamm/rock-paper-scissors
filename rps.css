@@ -1,0 +1,59 @@
+body{
+    background-color: antiquewhite;
+    display:flex;
+    
+    justify-content: center;
+    align-items: center ;
+    border: 5px solid black;
+    margin:0;
+    height: 100vh;
+   
+    
+}
+
+
+.icons{
+   
+   width:100vh;
+  display:flex;
+  justify-content:space-between;
+ 
+}
+
+button{
+    border:solid black 1px;
+    border-radius: 30px;
+    padding:20px;
+    margin:5px;
+    font-size:xx-large;
+    background-color: salmon;
+ }
+
+ button:hover{
+    background-color: orange;
+    font-weight: bolder;
+    color :white;
+ }
+
+ img{
+    height: auto;
+    width: 70px;
+}
+
+ .rock, .paper, .scissor{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .scissor img{
+    height:100px;
+    width:auto;
+
+ }
+
+ .rock img{
+    height:100px;
+    width: auto;
+ }
