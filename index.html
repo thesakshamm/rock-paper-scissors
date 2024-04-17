@@ -5,74 +5,20 @@
         <link rel="stylesheet" href="rps.css">
     </head>
     <body>
+        <h1 id = "playerScore"> Player Score: 0</h1>
+        <h1 id = "computerScore"> Computer Score: 0</h1>
+        <h2 id = gameMsg></h2>
+        
         <div class = 'icons'>
-        <div class = 'rock'> <img src = './rock.png'><button>ROCK</button></div>
-        <div class = 'paper'><img src = './paper.png'><button>PAPER</button></div>
-        <div class = 'scissor'><img src = './scissor.png'><button>SCISSOR</button></div>
+        <div class = 'rock'> <img src = './rock.png'><button id = "rock_btn">ROCK</button></div>
+        <div class = 'paper'><img src = './paper.png'><button id = "paper_btn">PAPER</button></div>
+        <div class = 'scissor'><img src = './scissor.png'><button id = "scissor_btn">SCISSOR</button></div>
         </div>
+
+        <h1 id = "resultMsg" > </h1>
+
+        
        
-       
-       
-       <script>
-/*get computer to select rock, paper or scissors
-get player to type rock, paper or scissors
-write what to display for each condition i.e what happen when player selects rock and computer selects scissors 
-possible conditions (rock, paper) ,(rock, scissor), (rock,rock), 
-(paper,rock), (paper scissor), (paper, paper), (scissor,rock), (scissor,paper), (scissor, scissor)
- 
-
- let playerScore = 0;
-let computerScore = 0;
-
- function playRound(){
- let random = Math.floor(Math.random()*3);
-
-function getComputerChoice (){
-
-    if(random == 0){return "rock" }
-    else if(random == 1){return "paper" }
-    else if(random == 2){return "scissor" }
-}
-
-function game(playerSelection, computerSelection){
-
-    if (playerSelection =="rock" && getComputerChoice()=="paper")       { console.log ("You lose, I had chosen paper"); return false} 
-    if (playerSelection =="rock" && getComputerChoice()=="scissor")     {console.log ("You win, I had chosen scissor"); return true}
-    else if (playerSelection =="paper" && getComputerChoice()=="scissor")    { console.log ("You lose, I had chosen scissor"); return false}
-    else if (playerSelection =="paper" && getComputerChoice()=="rock")       { console.log ("You win, I had chosen rock"); return true}
-    else if (playerSelection =="scissor" && getComputerChoice()=="paper")    { console.log ("You win, I had chosen paper"); return true}   
-    else if (playerSelection =="scissor" && getComputerChoice()=="rock")     { console.log ("You lose, I had chosen rock"); return false}
-    else if(playerSelection == getComputerChoice()) { console.log("It's a tie. PLAY AGAIN!");  playRound()}
-}
-
-let input = prompt("type rock, paper or scissor to play rock, paper and scissor")
-let playerSelection= input.toLowerCase();
-const computerSelection = getComputerChoice();
-
-    switch (game(playerSelection, computerSelection)){
-    case true: playerScore++
-    break
-    case false:computerScore++
-    break
-}
-
-console.log("Player Score: " + " " + playerScore)
-console.log("Computer Score: " + " " + computerScore)
- }
-
- playRound()
- playRound()
- playRound()
- playRound()
- playRound()
-
-function result(){
-    if (playerScore > computerScore){console.log("Woah, seems like you won the game")}
-    else if (computerScore > playerScore) {console.log("Computerji won the game. Better luck next time!")}
-    else {console.log(" It's a draw.")}
-}
-result()*/
-
-</script>
-   </body> 
-</html>
+     <script src="./mechanic.js"></script>
+    </body> 
+</html>a
