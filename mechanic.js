@@ -186,6 +186,16 @@ else
 
 
 
+let thebtn = document.querySelector("#thebtn");
+let messages = ["Come on now, don't be shy. Click one of the buttons below and START THE GAME!!", "not me, click the buttons below", "Why are you still clicking me?", "Stop it", "Okay fine, I won't change now", "OMG still?"];
+let counter = 0;
+
+thebtn.addEventListener("click", () => {
+    if (counter < messages.length) {
+        thebtn.textContent = messages[counter];
+        counter++;
+    }
+});
 
 
 
