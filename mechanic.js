@@ -112,16 +112,40 @@ function playRound()
     console.log("Player Score: " + " " + playerScore)
     console.log("Computer Score: " + " " + computerScore)
 
-    if(playerScore >= 5 || computerScore >= 5)
-{
-result()
-computerScore = 0;
-htmlcomputerScore.textContent = "Computer Score: " + 0
-playerScore = 0;
-htmlplayerScore.textContent = "Player Score: " + 0
+    
+
+    if (playerScore == 5 || computerScore == 5)
+    {
+        
+        htmlcomputerScore.textContent = " Final Computer Score: " + playerScore
+        htmlplayerScore.textContent = " Final Player Score: " + computerScore
+        let classIcons = document.querySelector(".icons")
+        classIcons.remove()
+        
+        
+        const resetBtn = document.createElement("button");
+        resetBtn.textContent = "RESET";
+        document.body.appendChild(resetBtn);
+
+        resetBtn.addEventListener("click", () =>{
+            document.body.appendChild(classIcons)
+            computerScore = 0
+            playerScore = 0
+            htmlcomputerScore.textContent = "Computer Score: " + 0
+            htmlplayerScore.textContent = "Player Score: " + 0
+            resetBtn.remove()
+            
+        } )
+
+        
+    }
+    
+    
+
+   
 
 
-}
+    
 
 }
 
