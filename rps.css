@@ -1,14 +1,29 @@
 body{
     background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    margin:5px;
+    align-items: center;
     
-    text-align: center;
-    justify-content: center;
-    align-items: center ;
-    border: 5px solid black;
-    margin:0;
-    height: 100vh;
+    
+   
    
     
+}
+
+.scores{
+   display: flex;
+   width:100vh;
+   background-color: beige;
+   justify-content: space-around;
+   padding: 50px;
+   color: black;
+   flex-grow: 1;
+}
+
+#playerScore, #computerScore{
+   border: solid black;
+   padding: 20px;
 }
 
 

@@ -11,14 +11,24 @@ let playerScore = 0;
 let computerScore = 0;
 let resultMsg = document.querySelector("#resultMsg")
 
+
+
+
 let rock_btn = document.querySelector("#rock_btn");
-rock_btn.addEventListener("click", () => { playerSelection = "rock"; playRound();})
+rock_btn.addEventListener("click", () => { playerSelection = "rock"; playRound();  })
 
 let paper_btn = document.querySelector("#paper_btn");
-paper_btn.addEventListener("click", () => { playerSelection = "paper"; playRound()})
+paper_btn.addEventListener("click", () => { playerSelection = "paper"; playRound();  })
 
 let scissor_btn = document.querySelector("#scissor_btn");
-scissor_btn.addEventListener("click", () => { playerSelection = "scissor"; playRound()})
+scissor_btn.addEventListener("click", () => { playerSelection = "scissor"; playRound();})
+
+let gameMsg = document.querySelector("#gameMsg")
+
+let start = document.querySelector("#start")
+
+
+
 
 
 
@@ -41,7 +51,7 @@ function playRound()
     //let input = prompt("type rock, paper or scissor to play rock, paper and scissor")
     //let playerSelection= input.toLowerCase();
     
-    let gameMsg = document.querySelector("#gameMsg")
+    
     computerSelection = getComputerChoice()
     function game(playerSelection, computerSelection)
     {
@@ -87,9 +97,8 @@ function playRound()
         { 
             console.log("It's a tie. PLAY AGAIN!");  
             gameMsg.textContent = "It's a tie. PLAY AGAIN!"
-            
-            
         }
+       
     }
 
     let htmlplayerScore = document.querySelector("#playerScore")
@@ -105,7 +114,7 @@ function playRound()
         break
         case false:
             computerScore++
-            htmlcomputerScore.textContent = "Computer Score:" + computerScore
+            htmlcomputerScore.textContent = "Computer Score: " + computerScore
         break
     }
 
@@ -116,6 +125,7 @@ function playRound()
 
     if (playerScore == 5 || computerScore == 5)
     {
+        result()
         
         htmlcomputerScore.textContent = " Final Computer Score: " + playerScore
         htmlplayerScore.textContent = " Final Player Score: " + computerScore
@@ -134,23 +144,14 @@ function playRound()
             htmlcomputerScore.textContent = "Computer Score: " + 0
             htmlplayerScore.textContent = "Player Score: " + 0
             resetBtn.remove()
+            resultMsg.textContent = ""
+            gameMsg.textContent = ""
             
         } )
 
         
     }
-    
-    
-
-   
-
-
-    
-
 }
-
-
-
 
 
 
@@ -161,7 +162,7 @@ function result()
 if (playerScore > computerScore)
 {
     console.log("Woah, seems like you won the game")
-    resultMsg.textContent = "Woah, seems like you won the game"
+    resultMsg.textContent = "Woah, seems like you won the game. Now GO AND CONQUER THE WORLD!!!"
 }
 else if (computerScore > playerScore) 
 {
@@ -180,6 +181,11 @@ else
     resultMsg.textContent = " It's a draw."
 }
 }
+
+
+
+
+
 
 
 
