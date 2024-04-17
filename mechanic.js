@@ -127,8 +127,8 @@ function playRound()
     {
         result()
         
-        htmlcomputerScore.textContent = " Final Computer Score: " + playerScore
-        htmlplayerScore.textContent = " Final Player Score: " + computerScore
+        htmlcomputerScore.textContent = " Final Computer Score: " + computerScore
+        htmlplayerScore.textContent = " Final Player Score: " + playerScore
         let classIcons = document.querySelector(".icons")
         classIcons.remove()
         
